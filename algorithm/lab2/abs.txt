@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+   
+   int n;
+   
+   cin >> n;
+   
+   int s[n];
+   
+   for(int i = 0;i < n;i++){
+      cin >> s[i];
+   }
+   
+   int m;
+   
+   cin >> m;
+   
+   int mindelt = abs(s[0] - m);
+   
+   int jakyn = s[0];
+   
+   for(int i = 1;i < n;i++){
+      if(abs(s[i] - m) < mindelt){
+        mindelt = abs(s[i] - m);
+        jakyn = s[i];
+      }
+   }
+   
+    cout << jakyn << endl;
+ 
+  return 0;
+}
